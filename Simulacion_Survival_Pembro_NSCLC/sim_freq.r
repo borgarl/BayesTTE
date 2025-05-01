@@ -234,7 +234,7 @@ sim_freq <- function(n_sim = 1,
       scale_color_discrete(labels = c("HR = 0.6", "HR = 1")) +
       scale_linetype_discrete(labels = c("Power", "Type I Error")) +
       theme_minimal() +
-      facet_grid(zoom ~ ., scales = "free_y") + # Create two panels with free y-axis scales
+      facet_grid(zoom ~ ., scales = "free_y") + 
       geom_hline(yintercept = 0.1, linetype = "dashed", color = "black", data = subset(df, zoom == "Zoomed")) 
     )
     
