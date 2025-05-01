@@ -286,10 +286,7 @@ sim_bayes <- function(n_sim = 1,
       scale_color_discrete(labels = c(paste("HR = ", round((x[1,1]/x[1,2])^shape_parameter, 2)), "HR = 1")) +
       scale_linetype_discrete(labels = c("Power", "Type I Error")) +
       theme_minimal() 
-      # +
-      # facet_grid(zoom ~ ., scales = "free_y") + 
-      # geom_hline(yintercept = 0.1, linetype = "dashed", color = "black", data = subset(df, zoom == "Zoomed")) 
-      # 
+
       
       p4 <- ggplot(data, aes(x = sample_size, y = MSE)) +
         geom_point() +
